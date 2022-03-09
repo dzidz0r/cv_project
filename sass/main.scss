@@ -1,0 +1,46 @@
+$primary: #4A1259;
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$custom-colors: (
+    "dk-purple": #200726,
+    "lg-purple": #622773,
+    "plum": #493D59,
+    "lg-plum": #533E8B,
+    "dk-blue": #1C1042,
+    "lg-ash": #A192A6,
+    "gray": #b8b7bb,
+    "dk-gray": #38373D,
+    "peach": #F28585,
+    "teal": #008F8C,
+    "lg-teal": #C7FFED,
+    "an-blue": #184C78,
+    "turq": #00E3CC,
+    "r-blue": #0099DD,
+    "gold": #F3BB1D,
+    "dk-peach": #BF7256,
+    "pink": #EB7091,
+    "lg-pink": #FAE1E6,
+    "red": #AE0E14
+);
+
+$theme-colors: map-merge($custom-colors, $theme-colors);
+
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge(
+  $theme-colors-rgb,
+  (
+    "black": to-rgb($black),
+    "white": to-rgb($white),
+    "body":  to-rgb($body-color)
+  )
+);
+
+$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
