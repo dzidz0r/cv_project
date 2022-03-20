@@ -5,7 +5,7 @@
 .cover-img {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(10,20,30,0.7),rgba(10,20,30,0.7)), url(img/bw_desk.jpg);
+    background-image: linear-gradient(rgba(10,20,30,0.7),rgba(10,20,30,0.7)), url(img/ak.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
