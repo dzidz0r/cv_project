@@ -39,6 +39,19 @@
   font-size: 30px;
 }
 
+.mail {
+  text-decoration: none;
+}
+
+.mail:hover {
+  text-decoration: underline;
+  color: #A192A6 !important;
+}
+
+.s-link:hover {
+  color: #FAE1E6 !important;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
